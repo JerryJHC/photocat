@@ -37,7 +37,7 @@ function showCats(data) {
 }
 
 window.onload = () => {
-  ajax('GET', 'https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc')
+  ajax('GET', 'https://api.thecatapi.com/v1/images/search?category_ids=2&limit=5&page=1')
     .then(showCats)
     .catch((error) => {
       console.log("Error" + error.statusText + " - " + error.status);
